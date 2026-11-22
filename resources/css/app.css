@@ -23,16 +23,16 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
-    --color-accent: var(--color-neutral-800);
-    --color-accent-content: var(--color-neutral-800);
+    --color-accent: #1e3a5f;
+    --color-accent-content: #1e3a5f;
     --color-accent-foreground: var(--color-white);
 }
 
 @layer theme {
     .dark {
-        --color-accent: var(--color-white);
-        --color-accent-content: var(--color-white);
-        --color-accent-foreground: var(--color-neutral-800);
+        --color-accent: #93c5fd;
+        --color-accent-content: #bfdbfe;
+        --color-accent-foreground: #172033;
     }
 }
 
@@ -59,6 +59,51 @@ input:focus[data-flux-control],
 textarea:focus[data-flux-control],
 select:focus[data-flux-control] {
     @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+[data-flux-button][data-variant="primary"] {
+    @apply shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md;
+}
+
+[data-flux-control] {
+    @apply transition duration-150;
+}
+
+.public-page {
+    background:
+        radial-gradient(ellipse at 86% 2%, rgb(219 234 254 / 68%), transparent 32rem),
+        linear-gradient(180deg, #f8fafc 0%, #fff 42rem);
+}
+
+.dark .public-page {
+    background:
+        radial-gradient(ellipse at 86% 2%, rgb(37 72 112 / 35%), transparent 32rem),
+        #111827;
+}
+
+.dashboard-shell {
+    background:
+        radial-gradient(ellipse at 95% 0%, rgb(219 234 254 / 48%), transparent 32rem),
+        #f7f9fc;
+}
+
+.dark .dashboard-shell {
+    background:
+        radial-gradient(ellipse at 95% 0%, rgb(37 72 112 / 28%), transparent 32rem),
+        #111827;
+}
+
+.auth-shell {
+    background:
+        radial-gradient(ellipse at 18% 8%, rgb(219 234 254 / 75%), transparent 25rem),
+        radial-gradient(ellipse at 90% 92%, rgb(254 243 199 / 50%), transparent 28rem),
+        #f8fafc;
+}
+
+.dark .auth-shell {
+    background:
+        radial-gradient(ellipse at 18% 8%, rgb(37 72 112 / 38%), transparent 25rem),
+        #111827;
 }
 
 /* \[:where(&)\]:size-4 {
