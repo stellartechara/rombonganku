@@ -1,0 +1,53 @@
+<?php
+
+return [
+    'required' => ':attribute wajib diisi.',
+    'string' => ':attribute harus berupa teks.',
+    'integer' => ':attribute harus berupa angka bulat.',
+    'numeric' => ':attribute harus berupa angka.',
+    'boolean' => ':attribute harus berupa ya atau tidak.',
+    'email' => ':attribute harus berupa alamat email yang valid.',
+    'date' => ':attribute bukan tanggal yang valid.',
+    'date_format' => ':attribute harus berformat :format.',
+    // Dipakai untuk tanggal berangkat, jadi dibuat spesifik "hari ini".
+    'after_or_equal' => ':attribute tidak boleh sebelum hari ini.',
+    'regex' => 'Format :attribute tidak valid.',
+    'in' => ':attribute yang dipilih tidak valid.',
+    'enum' => ':attribute yang dipilih tidak valid.',
+    'unique' => ':attribute sudah dipakai.',
+    'confirmed' => 'Konfirmasi :attribute tidak cocok.',
+    'min' => [
+        'numeric' => ':attribute minimal :min.',
+        'string' => ':attribute minimal :min karakter.',
+        'array' => ':attribute minimal :min item.',
+    ],
+    'max' => [
+        'numeric' => ':attribute maksimal :max.',
+        'string' => ':attribute maksimal :max karakter.',
+        'array' => ':attribute maksimal :max item.',
+    ],
+
+    'attributes' => [
+        'customer_name' => 'nama',
+        'customer_phone' => 'nomor WhatsApp',
+        'trip_date' => 'tanggal berangkat',
+        'passenger_count' => 'jumlah penumpang',
+        'days' => 'lama perjalanan',
+        'km' => 'jarak',
+        'notes' => 'catatan',
+        'names' => 'nama penumpang',
+        'status' => 'status',
+        'deal_price' => 'harga deal',
+        'stop_place' => 'tempat',
+        'stop_time' => 'jam',
+        'name' => 'nama',
+        'phone' => 'nomor HP',
+        'vehicle_type' => 'jenis kendaraan',
+        'plate' => 'plat nomor',
+        'capacity' => 'kapasitas',
+        'new_driver_id' => 'sopir',
+        'new_share' => 'bagian harga',
+        'email' => 'email',
+        'password' => 'kata sandi',
+    ],
+];
