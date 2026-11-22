@@ -217,6 +217,9 @@ new #[Title('Detail pesanan')] class extends Component {
     </div>
 
     <div class="flex flex-wrap gap-2">
+        <flux:button href="{{ route('bookings.day', $booking) }}" wire:navigate size="sm" variant="primary" icon="play">
+            Mode hari H
+        </flux:button>
         <flux:button href="https://wa.me/{{ $wa }}" target="_blank" size="sm" icon="chat-bubble-left-right">
             Hubungi lewat WhatsApp
         </flux:button>
