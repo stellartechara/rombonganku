@@ -45,8 +45,10 @@ new #[Title('Dashboard sopir')] class extends Component {
 @endphp
 
 <div class="space-y-6">
-    <flux:heading size="xl" level="1">Dashboard sopir</flux:heading>
-
+    <div class="flex items-center justify-between gap-3">
+        <flux:heading size="xl" level="1">Dashboard sopir</flux:heading>
+        <flux:button href="{{ route('drivers.index') }}" wire:navigate size="sm" icon="truck">Rekan dan kendaraan</flux:button>
+    </div>
     <div class="grid gap-4 sm:grid-cols-3">
         <div class="rounded-xl border border-zinc-200 p-4 dark:border-zinc-700">
             <flux:text class="text-sm">Permintaan baru</flux:text>
