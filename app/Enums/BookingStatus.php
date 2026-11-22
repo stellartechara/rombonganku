@@ -22,4 +22,16 @@ enum BookingStatus: string
             self::Batal => 'Batal',
         };
     }
+
+        public function color(): string
+    {
+        return match ($this) {
+            self::Permintaan => 'amber',
+            self::Nego => 'blue',
+            self::Deal => 'green',
+            self::Berjalan => 'purple',
+            self::Selesai => 'zinc',
+            self::Batal => 'red',
+        };
+    }
 }
