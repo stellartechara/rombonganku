@@ -31,9 +31,14 @@ class BookingVehicle extends Model
     }
 
     /** Total biaya yang ditanggung sopir (BBM, tol, dll). */
+        /** Total biaya yang ditanggung sopir (BBM, tol, dll). */
     public function driverExpenses(): int
     {
-        return (int) $this->expenses()->where('paid_by', Expense::PAID_BY_DRIVER)->sum('amount');
+        $expenses = $this->relationLoaded('expenses')
+            ? $this->expenses
+            : $this->expenses()->get();
+
+        return (int) $expenses->where('paid_by', Expense::PAID_BY_DRIVER)->sum('amount');
     }
 
     /** Pendapatan bersih = bagian harga - setoran - biaya yang ditanggung sopir. */
